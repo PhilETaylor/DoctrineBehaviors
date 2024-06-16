@@ -174,6 +174,8 @@ final class BlameableEventSubscriber
             'targetEntity' => $this->blameableUserEntity,
             'joinColumns' => [
                 [
+                    // Required for orm 3
+                    'referencedColumnName' => '',
                     'onDelete' => 'SET NULL',
                 ],
             ],
